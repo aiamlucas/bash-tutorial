@@ -34,3 +34,16 @@ $ ls -l /usr/bin/ | grep bash
 1 ~ │ Good day to you
 2 ~ │ and nice to meet you!
 ───────┴──────────────────────────────────────────────────────────────────────────────
+
+## Input redirection
+
+$ wc < hello.txt
+// with this command I can count the words in the file hello.txt
+
+## Here documents
+
+$ wc << EOF
+
+> Hello World!
+> EOF
+> // with this command I can count the words in the string Hello World!
