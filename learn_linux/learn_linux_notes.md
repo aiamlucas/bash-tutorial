@@ -129,3 +129,49 @@ chmod -x genids.sh // Remove execute permissions
 ```
 chmod +x genids.sh // Add execute permissions
 ```
+
+---
+
+# Compiled Programs vs Interpreted Programs
+
+## Compiled Programs
+
+- **Languages:** Commonly written in languages such as C, C++, or Rust.
+- **Compilation Process:**  
+  The source code is transformed by a compiler into machine code. This machine code is specific to the target CPU architecture.
+- **Execution:**  
+  The resulting binary is executed directly by the CPU without the need for an intermediary program.
+- **Performance:**  
+  Compiled programs are generally faster since the code is optimized during compilation and runs directly on the hardware.
+- **Portability:**  
+  Binaries are platform-specific. Code must be recompiled for different architectures.
+
+## Interpreted Programs
+
+- **Languages:** Often written in languages like Python, Ruby, or JavaScript.
+- **Interpretation Process:**  
+  The source code is executed by an interpreter that reads and runs the code line by line.
+- **Execution:**  
+  No standalone binary is created; the interpreter handles execution at runtime.
+- **Performance:**  
+  Interpreted programs are typically slower because the code is processed on the fly and may lack the same level of hardware-specific optimization.
+- **Portability:**  
+  The same source code can run on any platform with a compatible interpreter, making it more flexible for cross-platform development.
+
+---
+
+# Redirecting Streams
+
+## Standard Streams
+
+- You can redirect stdout and stderr to a file using the `>` and `2>` operators, respectively.
+
+```
+echo "Hello, World!" > output.txt
+# Hello, World! will be written to output.txt
+```
+
+```
+ls /nonexistent 2> error.txt
+# The error message will be written to error.txt
+```
